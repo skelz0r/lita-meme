@@ -4,7 +4,7 @@ module Lita
   module Handlers
     class Meme < Handler
       route /^meme list$/, :list, command: true, help: { "lita meme list" => "Returns a list of memes" }
-      route /^(.*)$/i, :detect_meme, command: true
+      route /^(.*)$/i, :detect_meme, command: false
 
       MEMES = [
         { regex: /(one does not simply) (.*)/i, id: 61579, description: "One does not simply X" },
